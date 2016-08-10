@@ -14,14 +14,13 @@ for a in range(1,50):
 
     xTrain = [row[1] for row in training_feature_set]
     x = svd.fit_transform(xTrain)
-    y = [row[2] for row in training_feature_set]
-
+    y = [row[6] for row in training_feature_set]
     clf = svm.SVC(kernel = 'linear', C=1).fit(x, y)
 
 
     xTest  = [row[1] for row in test_set]
     xT = svd.fit_transform(xTest)
-    yT = [row[2] for row in test_set]
+    yT = [row[6] for row in test_set]
 
     # pred = clf.predict(xT)
 
