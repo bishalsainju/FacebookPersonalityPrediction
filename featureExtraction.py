@@ -34,7 +34,7 @@ def featExtr():
     for id in usermap:
         training_users.add(id)
         cnt += 1
-        if cnt > TAKE:
+        if cnt >= TAKE:
             break
 
     maxcount = {}
