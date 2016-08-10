@@ -2,20 +2,20 @@ import json
 import csv
 
 def featExtr():
-    with open('analysis/usermap.json') as json_data:
+    with open('analysisFiles/usermap.json') as json_data:
         usermap = json.load(json_data)
-    with open('analysis/userOpn.json') as json_data1:
+    with open('analysisFiles/userOpn.json') as json_data1:
         userOpn = json.load(json_data1)
-    with open('analysis/userCon.json') as json_data2:
+    with open('analysisFiles/userCon.json') as json_data2:
         userCon = json.load(json_data2)
-    with open('analysis/userExt.json') as json_data3:
+    with open('analysisFiles/userExt.json') as json_data3:
         userExt = json.load(json_data3)
-    with open('analysis/userAgr.json') as json_data4:
+    with open('analysisFiles/userAgr.json') as json_data4:
         userAgr = json.load(json_data4)
-    with open('analysis/userNeu.json') as json_data5:
+    with open('analysisFiles/userNeu.json') as json_data5:
         userNeu = json.load(json_data5)
 
-    f = open("analysis/totalBOW.txt", "r")
+    f = open("analysisFiles/totalBOW.txt", "r")
     lines = f.read().split('\n')
     lines = lines[1:-1]
     f.close()
