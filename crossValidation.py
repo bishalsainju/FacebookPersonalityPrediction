@@ -11,7 +11,7 @@ def distance(a, b):
     for i in range(len(a)):
         s += (a[i] - b[i]) ** 2
     return s
-
+count = 0
 misclassified = 0
 matrix = [[0 for i in range(5)] for j in xrange(5)]
 for N in range(1, 2):
@@ -61,7 +61,7 @@ for N in range(1, 2):
                 matrix[2][3] += 1
             elif final == 5:
                 matrix[2][4] += 1
-        elif o == 2:
+        elif o == 4:
             if final == 1:
                 matrix[3][0] += 1
             elif final == 2:
@@ -72,7 +72,7 @@ for N in range(1, 2):
                 matrix[3][3] += 1
             elif final == 5:
                 matrix[3][4] += 1
-        elif o == 4:
+        elif o == 5:
             if final == 1:
                 matrix[4][0] += 1
             elif final == 2:
@@ -83,6 +83,8 @@ for N in range(1, 2):
                 matrix[4][3] += 1
             elif final == 5:
                 matrix[4][4] += 1
+        else:
+            count += 1
 print "The Cross Validation Matrix is:"
 for a in matrix:
     print a
