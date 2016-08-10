@@ -25,10 +25,10 @@ for N in range(1, 100):
             for j in range(N):
                 if dn < dist[j]:
                     dist[j] = dn
-                    classification[j] = c1
+                    classification[j] = o1
                     break
         final = sum(classification) / N
         # print 'original class ' + str(cls) + ' classified as ' + str(final)
-        misclassified += c != final
-    print 'No of clusters in KNN:' + str(N) + ' Misclassified-Test-Set:' + str(misclassified) + ' Accuracy:' + str(1 - misclassified / 50.0)
+        misclassified += o != final
+    print 'K = ' + str(N) + '\tMisclassified-Test-Set:' + str(misclassified) + '\tAccuracy:' + str(1 - misclassified / 50.0)
 #end loop
