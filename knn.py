@@ -14,7 +14,7 @@ def distance(a, b):
 
 misclassified = 0
 
-for N in range(1, 100):
+for N in range(1, 50):
     misclassified = 0
     for id, feature, o, c, e, a, n in test_set:
         # print feature
